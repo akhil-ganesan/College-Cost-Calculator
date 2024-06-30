@@ -3,6 +3,7 @@ principal = 225000
 simple_interest_rate = 0.07
 pub_sal = 90000
 priv_sal = 105000
+# These were manually calculated from median salary numbers (publics have greater growth due to a relateively lower starting salary)
 pub_gr = 0.0215
 priv_gr = 0.0206
 
