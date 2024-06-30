@@ -10,6 +10,7 @@ priv_gr = 0.0206
 
 # Initialize variables
 loan_balance = principal
+# The -pub_sal is included to account for early graduation
 cumulative_salary_difference = -pub_sal
 year = 0
 
@@ -18,11 +19,11 @@ def get_sal(gr, init, yr):
 
 # Calculate the number of years needed for the cumulative salary difference to equal the loan balance using simple interest
 while cumulative_salary_difference < loan_balance:
-    
+    # The year+1 is included to account for early graduation
     annual_salary_difference = get_sal(priv_gr, priv_sal, year) - get_sal(pub_gr, pub_sal, year+1)
     
     if (annual_salary_difference < 0):
-        print(f"No convergence {year}")
+        print(f"No convergence on a break-even year. Program stops at year {year}")
         break
     
     cumulative_salary_difference += annual_salary_difference
